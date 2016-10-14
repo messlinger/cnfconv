@@ -13,16 +13,16 @@ does not convert correctly, I would be obliged if you could send me copy.
 
 ### Files
 
-'cnf2txt.exe' 		Executable binary (Windows)  
-'cnf2txtall.bat' 	Batch file (Windows). Converts all .cnf files in the current directory.  
-'cnf2txtall' 		Batch file (Linux). Converts all .cnf files in the current directory.  
-'cnf2txt.c' 		Source code (system independent).  
+`cnf2txt.exe` 		Executable binary (Windows)  
+`cnf2txtall.bat` 	Batch file (Windows). Converts all .cnf files in the current directory.  
+`cnf2txtall` 		Batch file (Linux). Converts all .cnf files in the current directory.  
+`cnf2txt.c` 		Source code (system independent).  
+
 
 ### Installation (Windows)
 
-
-Copy the files cnf2txt.exe and cnf2txtall.bat to the Windows system path
-(typically C:\WINDOWS) or to the folder containing the data files.
+Copy the files `cnf2txt.exe` and `cnf2txtall.bat` to the Windows system path
+(typically `C:\WINDOWS`) or to the folder containing the data files.
 
 
 ### Installation (Linux)
@@ -45,8 +45,8 @@ Convert all files in the current directory:
 
 ### Usage (Windows explorer):
 
-Convert a single file: Drag'n'drop the input .cnf file onto cnf2txt.exe
-Convert all files in the current directory: Double click on cnf2txtall.bat
+* Convert a single file: Drag'n'drop the input .cnf file onto `cnf2txt.exe`.
+* Convert all files in the current directory: Double click on `cnf2txtall.bat`
 
 **Note**: Make sure your explorer does not hide the file extensions. 
 
