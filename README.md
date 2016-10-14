@@ -13,10 +13,10 @@ does not convert correctly, I would be obliged if you could send me copy.
 
 ### Files
 
-`cnf2txt.exe` 		Executable binary (Windows)  
-`cnf2txtall.bat` 	Batch file (Windows). Converts all .cnf files in the current directory.  
-`cnf2txtall` 		Batch file (Linux). Converts all .cnf files in the current directory.  
-`cnf2txt.c` 		Source code (system independent).  
+* `cnf2txt.exe` Executable binary (Windows)  
+* `cnf2txtall.bat` 	Batch file (Windows). Converts all .cnf files in the current directory.  
+* `cnf2txtall` 		Batch file (Linux). Converts all .cnf files in the current directory.  
+* `cnf2txt.c` 		Source code (system independent).  
 
 
 ### Installation (Windows)
@@ -34,13 +34,10 @@ Copy the files `cnf2txt.exe` and `cnf2txtall.bat` to the Windows system path
 
 ### Usage (command prompt):
 
-Convert a single file:
-
-    cnf2txt input_file [output_file]
-
-Convert all files in the current directory:
-
-    cnf2txtall
+* Convert a single file:
+    `cnf2txt input_file [output_file]`
+* Convert all files in the current directory:
+`cnf2txtall`
 
 
 ### Usage (Windows explorer):
