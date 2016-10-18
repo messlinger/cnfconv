@@ -26,6 +26,7 @@ section headers
 0x0A   uint32  start of section in data file
 
 
+
 section block
 -------------
 0x00   section header (same as in section header list)
@@ -56,7 +57,6 @@ observed but unknown section ids
 
 
 
-
 parameter section
 -----------------
 (offsets from beginning of section header)
@@ -69,9 +69,9 @@ parameter section
 
 0x30 + 0xFB    string[8]    energy calibration type
 
-0x30 + [0x24] + 0x01    uint64         start datetime
-0x30 + [0x24] + 0x09    uint64         real time
-0x30 + [0x24] + 0x11    uint64         live time
+0x30 + [0x24] + 0x01    datetime     start datetime
+0x30 + [0x24] + 0x09    time         real time
+0x30 + [0x24] + 0x11    time         live time
 
 0x30 + [0x22] + 0x44    pdp11_float    A[0] energy calibration coefficients
 0x30 + [0x22] + 0x48    pdp11_float    A[1]
@@ -137,7 +137,40 @@ analytics data:
 
 
 
+marker section
+--------------
+(offsets from beginning of section header)
 
+0x30 + 0x4A     uint32      marker left
+0x30 + 0x5A     uint32      marker right
+	
+	
+	
+channel data section
+--------------------
+
+0x30 + 0x1D0    uint32[n_channels]      channel count data (see parameter section for n_channels)
+
+
+
+floating point data format
+--------------------------
+Stored as PDP11 (DEC) 32bit floating point format
+To convert to IEEE 754 single precision (32bit),
+swap upper/lower word, interpret as float and divide by 4.
+
+
+time format
+-----------
+Stored as inverted unsigned 64bit integer in units of 0.1 microseconds.
+
+
+
+absolute datetime format
+-------------------------
+Modified Julian data stored as (non-inverted) unsigned 64bit integer in
+units of 0.1 microseconds. To convert to unixtime, divide by 10000000UL
+and subtract 3506716800UL.
 
 
 
