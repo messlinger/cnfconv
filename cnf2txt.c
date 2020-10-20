@@ -316,7 +316,7 @@ int main( int argc, char* argv[] )
 	fprintf( txt, "#-----------------------------------------------------------------------\n" );
 	/* NOTE: Genie2k starts counting channels with _1_ */
 	for (i=0; i<n_channels; i++)
-		fprintf( txt, "%d\t%.3f\t%lu\t%g\n", i+1, energy(i+1, A), channels[i], channels[i]/live_time );
+		fprintf( txt, "%d\t%.3f\t%lu\t%g\n", i+1, energy(i+1, A), (unsigned long)channels[i], channels[i]/live_time );
 
 	fclose(cnf);
 	fclose(txt);
