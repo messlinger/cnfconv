@@ -181,7 +181,7 @@ int main( int argc, char* argv[] )
 	data_len = fread_all(&data, cnf);
 	if (!data_len) {
 		int err = errno;
-		printf("Error reading from file %s:\n", filename, strerror(err) );
+		printf("Error reading from file %s: %s\n", filename, strerror(err) );
 		exit(1);
 	}
 
