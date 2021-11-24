@@ -15,7 +15,7 @@ does not convert correctly, I would be obliged if you could send me copy.
 
 * `cnf2txt.exe` Executable binary (Windows)  
 * `cnf2txtall.bat` 	Batch file (Windows). Converts all .cnf files in the current directory.  
-* `cnf2txtall` 		Batch file (Linux). Converts all .cnf files in the current directory.  
+* `cnf2txtall.sh	Batch file (Linux). Converts all .cnf files in the current directory.  
 * `cnf2txt.c` 		Source code (system independent).  
 
 
@@ -28,7 +28,7 @@ Copy the files `cnf2txt.exe` and `cnf2txtall.bat` to the Windows system path
 ### Installation (Linux)
 
     gcc -o cnf2txt.bin cnf2txt.c
-    chmod +x cnf2txtall.sh
+    chmod a+x cnf2txtall.sh
     sudo cp cnf2txt.bin cnf2txtall.sh /usr/local/bin
     sudo ln -s /usr/local/bin/cnf2txt.bin /usr/local/bin/cnf2txt
 
@@ -38,7 +38,7 @@ Copy the files `cnf2txt.exe` and `cnf2txtall.bat` to the Windows system path
 * Convert a single file:
     `cnf2txt input_file [output_file]`
 * Convert all files in the current directory:
-`cnf2txtall`
+    `cnf2txtall`
 
 
 ### Usage (Windows explorer):
