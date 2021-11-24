@@ -27,9 +27,10 @@ Copy the files `cnf2txt.exe` and `cnf2txtall.bat` to the Windows system path
 
 ### Installation (Linux)
 
-    gcc -o cnf2txt cnf2txt.c
-    chmod +x cnf2txtall
-    sudo cp cnf2txt cnf2txtall /usr/local/bin
+    gcc -o cnf2txt.bin cnf2txt.c
+    chmod +x cnf2txtall.sh
+    sudo cp cnf2txt.bin cnf2txtall.sh /usr/local/bin
+    sudo ln -s /usr/local/bin/cnf2txt.bin /usr/local/bin/cnf2txt
 
 
 ### Usage (command prompt):
